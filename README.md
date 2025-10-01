@@ -1,78 +1,196 @@
-# Stock Market Anomaly Detection: GME Analysis
+# StockPulse - Advanced Stock Market Anomaly Detection System
 
-## Project Overview
+## 🚀 Project Overview
 
+**StockPulse** is a comprehensive stock market anomaly detection system designed to analyze GameStop (GME) stock data and identify unusual patterns or events in stock behavior. The system combines multiple machine learning techniques with an interactive web dashboard to provide real-time insights into market dynamics and potential trading opportunities.
 
-https://github.com/user-attachments/assets/d1b5c802-1635-44d7-b92c-d341fd908c91
+### 🎯 Key Highlights
+- **Multi-Algorithm Detection**: 5 different ML algorithms for comprehensive analysis
+- **Interactive Dashboard**: Modern web interface with real-time visualization
+- **Scalable Architecture**: MongoDB integration with Flask API
+- **Real-time Analysis**: Dynamic date range selection and instant results
+- **Production Ready**: Complete error handling and responsive design
 
+![Project Demo](https://github.com/user-attachments/assets/d1b5c802-1635-44d7-b92c-d341fd908c91)
 
-This project focuses on detecting anomalies in the stock price data of GameStop (GME) using multiple machine learning techniques. We implement and compare various anomaly detection methods to identify unusual patterns or events in the stock's behavior, providing insights into market dynamics and potential trading opportunities.
+## ✨ Features
 
-## Features
+### 🔍 Anomaly Detection Algorithms
+- **Z-Score Method**: Statistical outlier detection based on standard deviations
+- **Isolation Forest**: Tree-based unsupervised anomaly detection
+- **DBSCAN Clustering**: Density-based spatial clustering for outlier identification
+- **LSTM Neural Networks**: Deep learning time series prediction for temporal anomalies
+- **Autoencoder**: Neural network reconstruction error-based detection
 
-- Data retrieval using yfinance
-- Comprehensive Exploratory Data Analysis (EDA)
-- Implementation of multiple anomaly detection techniques:
-  - Z-Score
-  - Isolation Forest
-  - DBSCAN (Density-Based Spatial Clustering of Applications with Noise)
-  - LSTM (Long Short-Term Memory) Neural Networks
-  - Autoencoder
-- Performance comparison of different methods
-- Interactive Streamlit app for result visualization
+### 🎨 Interactive Dashboard
+- **Real-time Visualization**: Dynamic charts with Chart.js integration
+- **Responsive Design**: Mobile-friendly interface with TailwindCSS
+- **Date Range Selection**: Flexible time period analysis
+- **Performance Metrics**: Live statistics and anomaly counts
+- **Multi-method Comparison**: Side-by-side algorithm results
 
-## Installation
+### 🏗️ Technical Features
+- **MongoDB Integration**: Scalable data storage and retrieval
+- **Flask API**: RESTful endpoints for data processing
+- **Feature Engineering**: Advanced technical indicators (Bollinger Bands, Volatility)
+- **Error Handling**: Comprehensive error management and validation
+- **Modular Architecture**: Clean separation of concerns
 
-1. Clone the repository:
+## 🚀 Quick Start
+
+### Prerequisites
+- Python 3.7+
+- MongoDB 4.0+
+- pip (Python package manager)
+
+### Installation Steps
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/Hifzatoufiq/dataweavers.git
+   cd DataWeavers/code/StockPulse
    ```
-   git clone https://github.com/yourusername/stock-anomaly-detection.git
-   cd stock-anomaly-detection
-   ```
 
-2. Create a virtual environment (optional but recommended):
-   ```
+2. **Setup Virtual Environment**
+   ```bash
    python -m venv venv
-   source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+   # Windows
+   venv\Scripts\activate
+   # Linux/Mac
+   source venv/bin/activate
    ```
 
-3. Install required packages:
-   ```
+3. **Install Dependencies**
+   ```bash
    pip install -r requirements.txt
    ```
 
-## Usage
+4. **Setup MongoDB**
+   - Install MongoDB locally or use MongoDB Atlas
+   - Update connection string in `Database/database connection.txt`
 
-1. Run the Jupyter Notebook for detailed analysis:
-   ```
-   jupyter notebook Stock_Anomaly_Detection.ipynb
-   ```
-
-2. Launch the Streamlit app:
-   ```
-   streamlit run app.py
+5. **Run the Application**
+   ```bash
+   python app.py
    ```
 
-## Project Structure
+6. **Access Dashboard**
+   - Open browser: `http://localhost:5000`
+   - Select date range and click "Detect Anomalies"
 
-- `Stock_Anomaly_Detection.ipynb`: Main Jupyter notebook containing the analysis
-- `app.py`: Streamlit app for interactive visualization
-- `requirements.txt`: List of required Python packages
-- `data/`: Directory for storing downloaded stock data (if applicable)
-- `models/`: Directory for saving trained models (if applicable)
+## 📊 Usage Guide
 
-## Methodology
+### Web Dashboard
+1. **Launch Application**
+   ```bash
+   python app.py
+   ```
 
-1. **Data Collection**: Retrieve GME stock data using yfinance library.
-2. **Preprocessing**: Clean data, handle missing values, and calculate additional features (e.g., returns, volatility).
-3. **Exploratory Data Analysis**: Visualize stock price trends, volume, returns, and volatility.
-4. **Anomaly Detection Methods**:
-   - Z-Score: Identify outliers based on standard deviations from the mean.
-   - Isolation Forest: Detect anomalies using isolation in the feature space.
-   - DBSCAN: Cluster data points and identify outliers.
-   - LSTM: Predict stock prices and flag significant deviations as anomalies.
-   - Autoencoder: Learn normal patterns and detect anomalies based on reconstruction error.
-5. **Model Comparison**: Evaluate and compare the performance of each method using precision, recall, and F1-score.
-6. **Visualization**: Create interactive plots to display detected anomalies and compare results.
+2. **Access Dashboard**
+   - Open `http://localhost:5000` in your browser
+   - Select start and end dates
+   - Click "Detect Anomalies" to analyze
+
+3. **Interpret Results**
+   - View interactive price chart with Bollinger Bands
+   - Identify anomalies marked with different colors:
+     - 🔴 Red: Z-Score anomalies
+     - 🟠 Orange: Isolation Forest anomalies  
+     - 🟣 Purple: DBSCAN anomalies
+   - Check statistics cards for anomaly counts and percentages
+
+### Jupyter Notebook Analysis
+1. **Open Detailed Analysis**
+   ```bash
+   jupyter notebook "Anomalies Detection.ipynb"
+   ```
+
+2. **Run Complete Analysis**
+   - Execute cells sequentially for comprehensive analysis
+   - View detailed visualizations and performance metrics
+   - Compare algorithm effectiveness
+
+## 📁 Project Structure
+
+```
+DataWeavers/
+├── Documentation/
+│   ├── StockPulse_Project_Overview.md    # Comprehensive project documentation
+│   └── Architecture_Diagram.md           # System architecture diagrams
+├── code/StockPulse/
+│   ├── app.py                            # Flask web application
+│   ├── requirements.txt                  # Python dependencies
+│   ├── clean_gme_data.csv               # Processed stock data
+│   ├── Anomalies Detection.ipynb        # Jupyter analysis notebook
+│   ├── README.md                         # Project documentation
+│   ├── static/
+│   │   └── style.css                     # Custom CSS styles
+│   └── templates/
+│       └── index.html                    # Main dashboard template
+└── Database/
+    └── database connection.txt           # MongoDB connection details
+```
+
+## 🏗️ System Architecture
+
+### High-Level Architecture
+```
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Data Sources  │    │   Data Pipeline │    │   ML Engine     │
+│                 │    │                 │    │                 │
+│ • Yahoo Finance │───▶│ • yfinance API  │───▶│ • Z-Score       │
+│ • Real-time     │    │ • Data Cleaning │    │ • Isolation     │
+│   Stock Data    │    │ • Feature Eng.  │    │   Forest        │
+│                 │    │ • MongoDB Store │    │ • DBSCAN        │
+└─────────────────┘    └─────────────────┘    │ • LSTM          │
+                                              │ • Autoencoder   │
+                                              └─────────────────┘
+                                                       │
+                                                       ▼
+┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
+│   Web Frontend  │◀───│   Flask API     │◀───│   Results       │
+│                 │    │                 │    │   Processing    │
+│ • Interactive   │    │ • REST Endpoints│    │                 │
+│   Dashboard     │    │ • Data Serving  │    │ • Anomaly       │
+│ • Chart.js      │    │ • JSON Response │    │   Detection     │
+│ • TailwindCSS   │    │ • Error Handling│    │ • Statistical   │
+│                 │    │                 │    │   Analysis      │
+└─────────────────┘    └─────────────────┘    └─────────────────┘
+```
+
+### Technology Stack
+- **Backend**: Python 3.x, Flask, Pandas, NumPy, Scikit-learn, TensorFlow
+- **Database**: MongoDB with PyMongo
+- **Frontend**: HTML5, JavaScript, Chart.js, TailwindCSS
+- **Data Source**: Yahoo Finance API via yfinance
+
+## 🔬 Methodology
+
+### 1. Data Collection & Preprocessing
+- **Data Source**: Yahoo Finance API for GME stock data (2000-2023)
+- **Data Cleaning**: Handle missing values, outliers, and data validation
+- **Feature Engineering**: 
+  - Returns calculation (percentage change)
+  - Volatility (20-day rolling standard deviation)
+  - Moving averages (20-day MA)
+  - Bollinger Bands (Upper/Lower bounds)
+
+### 2. Anomaly Detection Algorithms
+- **Z-Score Method**: Statistical outliers beyond 3 standard deviations
+- **Isolation Forest**: Tree-based unsupervised anomaly detection (1% contamination)
+- **DBSCAN Clustering**: Density-based spatial clustering (eps=0.5, min_samples=5)
+- **LSTM Neural Network**: Deep learning time series prediction
+- **Autoencoder**: Neural network reconstruction error-based detection
+
+### 3. Performance Evaluation
+- **Metrics**: Precision, Recall, F1-Score
+- **Comparison**: Side-by-side algorithm performance analysis
+- **Visualization**: Interactive charts with anomaly markers
+
+### 4. Real-time Processing
+- **API Endpoints**: RESTful Flask API for data processing
+- **Response Time**: < 5 seconds for 3-year dataset
+- **Scalability**: Handles datasets up to 10,000+ data points
 
 ## Results
 
@@ -101,7 +219,17 @@ The Streamlit app offers an interactive interface for exploring the anomaly dete
 - Extend the analysis to other stocks or financial instruments
 - Implement real-time anomaly detection for live stock data
 
-## Contributing
+## 👥 Development Team
+
+### Core Team Members
+- **Muhammad Usman** - Machine Learning & Data Science
+- **Amir Khan** - Frontend Development & UI/UX
+- **Youhana** - Database Architecture & Data Pipeline
+- **Waris Ali** - System Integration & DevOps
+
+*For detailed team information, roles, and contact details, please refer to the Documentation folder.*
+
+## 🤝 Contributing
 
 Contributions to this project are welcome! Please fork the repository and submit a pull request with your proposed changes.
 
@@ -118,3 +246,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 For any queries or discussions related to this project, please open an issue in the GitHub repository.
+
