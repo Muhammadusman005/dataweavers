@@ -1,18 +1,66 @@
+<<<<<<< HEAD
 # StockPulse - Advanced Stock Market Anomaly Detection System
 
 ## 🚀 Project Overview
+=======
+
+Stock Anomaly Detection - GameStop (GME)
+
+This project detects anomalies in the stock price data of GameStop (GME) using multiple machine learning techniques. It provides insights into unusual stock movements and potential trading opportunities.
+
+Features
+
+Data retrieval using yfinance
+
+Comprehensive Exploratory Data Analysis (EDA)
+
+Multiple anomaly detection methods:
+
+Z-Score
+
+Isolation Forest
+
+DBSCAN
+
+LSTM Neural Networks
+
+Autoencoder
+
+Performance comparison of different methods
+
+Interactive Flask web app for visualization
+
+Humanized, user-friendly interface
+
+Installation
+
+Clone the repository:
+
+git clone https://github.com/yourusername/stock-anomaly-detection.git
+cd stock-anomaly-detection
+>>>>>>> 8314255bd40a3a30a306c317658d2919841cca9c
 
 **StockPulse** is a comprehensive stock market anomaly detection system designed to analyze GameStop (GME) stock data and identify unusual patterns or events in stock behavior. The system combines multiple machine learning techniques with an interactive web dashboard to provide real-time insights into market dynamics and potential trading opportunities.
 
+<<<<<<< HEAD
 ### 🎯 Key Highlights
 - **Multi-Algorithm Detection**: 5 different ML algorithms for comprehensive analysis
 - **Interactive Dashboard**: Modern web interface with real-time visualization
 - **Scalable Architecture**: MongoDB integration with Flask API
 - **Real-time Analysis**: Dynamic date range selection and instant results
 - **Production Ready**: Complete error handling and responsive design
+=======
+Create a virtual environment (optional but recommended):
+
+python -m venv venv
+# Activate the environment:
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate     # Windows
+>>>>>>> 8314255bd40a3a30a306c317658d2919841cca9c
 
 ![Project Demo](https://github.com/user-attachments/assets/d1b5c802-1635-44d7-b92c-d341fd908c91)
 
+<<<<<<< HEAD
 ## ✨ Features
 
 ### 🔍 Anomaly Detection Algorithms
@@ -191,34 +239,65 @@ DataWeavers/
 - **API Endpoints**: RESTful Flask API for data processing
 - **Response Time**: < 5 seconds for 3-year dataset
 - **Scalability**: Handles datasets up to 10,000+ data points
+=======
+Install required packages:
 
-## Results
+pip install -r requirements.txt
 
-The project provides insights into:
-- Periods of unusual activity in GME stock
-- Effectiveness of different anomaly detection techniques for stock market data
-- Comparative analysis of model performances
+Usage
+Run Jupyter Notebook (for analysis)
+jupyter notebook notebooks/Stock_Anomaly_Detection.ipynb
 
-Detailed results and visualizations are available in the Jupyter notebook and Streamlit app.
+Launch Flask Web App (for interactive use)
+python app.py
 
-## Streamlit App Features
 
-The Streamlit app offers an interactive interface for exploring the anomaly detection results:
+Then open your browser and visit:
 
-- Stock data input and date range selection
-- Interactive EDA visualizations
-- Individual plots for each anomaly detection method
-- Combined visualization of all methods' results
-- Performance metrics comparison
-- Summary statistics of detected anomalies
+http://127.0.0.1:5000
 
-## Future Work
+Project Structure
+stock-anomaly-detection/
+│
+├─ app.py                 # Flask app
+├─ templates/             # HTML templates
+├─ static/                # CSS & JS files
+├─ data/                  # Stock data storage
+├─ models/                # Saved trained models
+├─ notebooks/             # Jupyter notebook for analysis
+├─ requirements.txt       # Required Python packages
+└─ utils.py               # Data processing & anomaly detection functions
 
-- Incorporate additional features (e.g., sentiment analysis, market indicators)
-- Experiment with ensemble methods for improved anomaly detection
-- Extend the analysis to other stocks or financial instruments
-- Implement real-time anomaly detection for live stock data
+Methodology
 
+Data Collection: Fetch stock data using yfinance.
+
+Preprocessing: Clean data, handle missing values, calculate returns & volatility.
+
+Exploratory Data Analysis (EDA): Visualize trends, volume, returns, and volatility.
+
+Anomaly Detection Methods:
+
+Z-Score
+>>>>>>> 8314255bd40a3a30a306c317658d2919841cca9c
+
+Isolation Forest
+
+DBSCAN
+
+LSTM
+
+Autoencoder
+
+Model Comparison: Evaluate performance using precision, recall, and F1-score.
+
+Visualization: Display anomalies interactively in the Flask app.
+
+Future Work
+
+Add sentiment analysis or market indicators
+
+<<<<<<< HEAD
 ## 👥 Development Team
 
 ### Core Team Members
@@ -230,20 +309,24 @@ The Streamlit app offers an interactive interface for exploring the anomaly dete
 *For detailed team information, roles, and contact details, please refer to the Documentation folder.*
 
 ## 🤝 Contributing
+=======
+Implement ensemble methods for better detection
+>>>>>>> 8314255bd40a3a30a306c317658d2919841cca9c
 
-Contributions to this project are welcome! Please fork the repository and submit a pull request with your proposed changes.
+Extend analysis to other stocks or real-time data
 
-## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+# Blog Post:
+https://stockpulseaptech.blogspot.com/2025/09/stockpulse-detecting-stock-market.html
 
-## Acknowledgments
 
-- yfinance library for providing easy access to Yahoo Finance data
-- Streamlit for enabling interactive data visualization
-- The open-source community for the various machine learning libraries used in this project
+# video Link
 
+<<<<<<< HEAD
 ## Contact
 
 For any queries or discussions related to this project, please open an issue in the GitHub repository.
 
+=======
+https://www.mediafire.com/file/76bb7w226ggqg17/StockPulse.webm/file
+>>>>>>> 8314255bd40a3a30a306c317658d2919841cca9c
